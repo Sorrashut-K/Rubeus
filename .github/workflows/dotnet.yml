@@ -26,10 +26,8 @@ jobs:
       run: choco install netfx-4.8-devpack
       shell: cmd
 
-    - name: Download and Install .NET Framework 4.0 Targeting Pack
-      run: |
-        curl -L -o netfx_40lp.exe https://download.microsoft.com/download/5/7/D/57D795BD-63E8-4FCF-B015-868C3E5D8F41/netfx_40lp.exe
-        start /wait netfx_40lp.exe /quiet /norestart
+    - name: Install .NET Framework 4.0.3 Developer Pack
+      run: choco install netfx-4.0.3-devpack --version=4.0.30319.17929
       shell: cmd
 
     - name: Restore dependencies
